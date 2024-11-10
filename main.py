@@ -34,7 +34,7 @@ def send_message(prompt):
     return var.text
 
 def evaluate(faculty_answer, student_answer):
-    data = send_message("evaluate the answer : " + student_answer + "with respect to" + faculty_answer + "and give the marks and. dont give anything else. ")
+    data = send_message("evaluate the answer : " + student_answer + "with respect to" + faculty_answer + "and give the marks as output in this format : marks : {marks obtained}, grade : {grade obtained} ")
     return data
 
 @app.get("/", response_class=HTMLResponse)
